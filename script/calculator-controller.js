@@ -17,7 +17,7 @@ class CalculatorController extends Controller {
 		this.subtractionButton.addEventListener("click", () => this.subtractionOperand("-"));
 		this.multiplicationButton.addEventListener("click", () => this.multiplicationOperand("*"));
 		this.divisionButton.addEventListener("click", () => this.divisionOperand("/"));
-		this.remainderButton.addEventListener("click", () => console.log("Addition button clicked"));
+		this.remainderButton.addEventListener("click", () => this.remainderOperand("%"));
 		this.squareRootButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.toPowerButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.logButton.addEventListener("click", () => console.log("Addition button clicked"));
@@ -147,6 +147,15 @@ class CalculatorController extends Controller {
 		const rightOperand = Number(this.inputRightField.value);
 		const divisionOperation = binaryOperators[operandSign];
 		const operationResults = divisionOperation(lefOperand,rightOperand);
+		return this.inputLeftField.value = operationResults;
+
+	}
+	async remainderOperand (operandSign) {
+
+		const lefOperand = Number(this.inputLeftField.value);
+		const rightOperand = Number(this.inputRightField.value);
+		const remainderOperation = binaryOperators[operandSign];
+		const operationResults = remainderOperation(lefOperand,rightOperand);
 		return this.inputLeftField.value = operationResults;
 
 	}

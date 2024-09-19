@@ -15,7 +15,7 @@ class CalculatorController extends Controller {
 		// add event listeners
 		this.additionButton.addEventListener("click", () => this.additionOperand("+"));
 		this.subtractionButton.addEventListener("click", () => this.subtractionOperand("-"));
-		this.multiplicationButton.addEventListener("click", () => console.log("Addition button clicked"));
+		this.multiplicationButton.addEventListener("click", () => this.multiplicationOperand("*"));
 		this.divisionButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.remainderButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.squareRootButton.addEventListener("click", () => console.log("Addition button clicked"));
@@ -123,15 +123,25 @@ class CalculatorController extends Controller {
 
 		const lefOperand = Number(this.inputLeftField.value);
 		const rightOperand = Number(this.inputRightField.value);
-		const additionOperation = binaryOperators[operandSign];
-		const operationResults = additionOperation(lefOperand,rightOperand);
+		const subtractionOperation = binaryOperators[operandSign];
+		const operationResults = subtractionOperation(lefOperand,rightOperand);
 		return this.inputLeftField.value = operationResults;
 		
 
 	
-}
-}
+	}
 
+	async multiplicationOperand (operandSign) {
+
+		const lefOperand = Number(this.inputLeftField.value);
+		const rightOperand = Number(this.inputRightField.value);
+		const multiplicationOperation = binaryOperators[operandSign];
+		const operationResults = multiplicationOperation(lefOperand,rightOperand);
+		return this.inputLeftField.value = operationResults;
+
+	}
+
+}
 
 /**
  * Register a listener for the window's "load" event.

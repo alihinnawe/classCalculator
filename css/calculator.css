@@ -19,12 +19,7 @@ body {
 			background-color: var(--corporate-division-color);
 		}
 
-		section.roll {
-			div.main img {
-				width: 1.5rem;
-				height: 1.5rem;
-
-			}
+		section.calculator {
 		}
 	}
 }

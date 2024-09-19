@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="dcterms.rightsHolder" content="Ali Hinnawe" />
+		<meta name="dcterms.rights" content="all rights reserved" />
+		<meta name="dcterms.dateCopyrighted" content="2024" />
+		<meta charset="utf-8" />
+
+		<title>Calculator App</title>
+		<link rel="icon" type="image/jpeg" href="image/calculator.png" />
+		<link rel="stylesheet" type="text/css" href="css/general.css" />
+		<link rel="stylesheet" type="text/css" href="css/calculator.css" />
+		<script type="module" async="true" src="script/calculator-controller.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav></nav>
+			<img class="logo" src="image/figd-logo.png" />
+		</header>
+
+		<main>
+			<article class="left hidden"></article>
+			<article class="center">
+				<section class="calculator">
+					<div class="main">
+					</div>
+					<div class="control">
+						<button type="button" class="evaluate">Copy</button>					
+						<button type="button" class="reset">reset</button>
+
+					</div>
+				</section>
+			</article>
+			<article class="right hidden"></article>
+		</main>
+
+		<footer>
+			<label>Nachricht</label>
+			<input type="text" class="message" readonly="true" />
+		</footer>
+	</body>
+</html>

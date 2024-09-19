@@ -18,20 +18,44 @@
 			<nav></nav>
 			<img class="logo" src="image/figd-logo.png" />
 		</header>
-
+		
 		<main>
 			<article class="left hidden"></article>
 			<article class="center">
 				<section class="calculator">
 					<div class="main">
-					</div>
-					<div class="control">
-						<button type="button" class="evaluate">Copy</button>					
-						<button type="button" class="reset">reset</button>
+						<input type="number" class="input" value="0" />
+						
+						<span class="operations">
+							<div class="arithmetic">
+								<button type="button" class="addition">+</button>
+								<button type="button" class="subtraction">−</button>
+							</div>
+
+							<div class="arithmetic">
+								<button type="button" class="multiplication">×</button>
+								<button type="button" class="division">÷</button>
+								<button type="button" class="percent">%</button>
+							</div>
+
+							<div class="arithmetic">
+								<button type="button" class="square">x²</button>  
+								<button type="button" class="sqrt">√x</button>
+								<button type="button" class="log">log</button>
+							</div>
+						</span>
+						
+						<input type="number" class="result" value="0" />
+						<button type="button" class="submitButton" >=</button>
 
 					</div>
+
+					<div class="control">
+						<button type="button" class="evaluate">Copy</button>					
+						<button type="button" class="reset">Reset</button>
+					</div>
 				</section>
-			</article>
+			</article>  
 			<article class="right hidden"></article>
 		</main>
 

@@ -1,25 +1,42 @@
-body {
-	header {
-		background-color: black;
-		display: flex;
+.calculator {
+	width: 500px;
+	padding: 5px;
+  }
+  
+  .main {
+	display: flex;
+	flex-direction: row;
+	padding:1rem;
+	align-items: center; 
+	background-color: ivory;
+	gap: 0.3rem;
+	justify-content: space-around;
+  }
+  
+  .main input {
+	width:10rem;
+	height: 1.5rem;
+	font-size: 18px;
+	border-radius: 5px;
+	text-align: right;
+	gap: 8rem;
 
-		nav {
-			width: 100%;
-		}
+  }
 
-		img.logo {
-			height: 2rem;
-		}
-	}
+  .operations {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding:1 rem;
+	background-color: light-grey;
+	margin: 0.3rem;
 
-	article.center {
-		section>div {
-			padding: 0rem 0.1rem;
-			margin-top: 0.25rem;
-			background-color: var(--corporate-division-color);
-		}
-
-		section.calculator {
-		}
-	}
+  }
+  
+.arithmetic {
+  display: flex;
+  gap: 5px;
+  justify-content: space-around;
 }
+  
+  

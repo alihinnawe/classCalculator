@@ -20,7 +20,7 @@ class CalculatorController extends Controller {
 		this.remainderButton.addEventListener("click", () => this.remainderOperand("%"));
 		this.squareRootButton.addEventListener("click", () => this.squareRootOperand("//"));
 		this.toPowerButton.addEventListener("click", () => this.squareRootOperand("**"));
-		this.logButton.addEventListener("click", () => console.log("Addition button clicked"));
+		this.logButton.addEventListener("click", () => this.logButtonOperand("log"));
 		this.submitButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.resetButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.copyButton.addEventListener("click", () => console.log("Addition button clicked"));

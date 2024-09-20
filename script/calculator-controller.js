@@ -54,22 +54,22 @@ class CalculatorController extends Controller {
 	
 	
 	get additionButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(1) > button.addition");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic> button.addition");
 	}
 	
 	
 	get subtractionButton () { 
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(1) > button.subtraction");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic> button.subtraction");
 	}
 	
 	
 	get multiplicationButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(2) > button.multiplication");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic> button.multiplication");
 	}
 	
 	
 	get divisionButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(2) > button.division");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic> button.division");
 	}
 	
 	

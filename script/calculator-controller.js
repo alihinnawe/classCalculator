@@ -13,14 +13,14 @@ class CalculatorController extends Controller {
 		super();
 		
 		// add event listeners
-		this.additionButton.addEventListener("click", () => this.additionOperand("+"));
-		this.subtractionButton.addEventListener("click", () => this.subtractionOperand("-"));
-		this.multiplicationButton.addEventListener("click", () => this.multiplicationOperand("*"));
-		this.divisionButton.addEventListener("click", () => this.divisionOperand("/"));
-		this.remainderButton.addEventListener("click", () => this.remainderOperand("%"));
-		this.squareRootButton.addEventListener("click", () => this.squareRootOperand("//"));
-		this.toPowerButton.addEventListener("click", () => this.squareRootOperand("**"));
-		this.logButton.addEventListener("click", () => this.logButtonOperand("log"));
+		this.additionButton.addEventListener("click", () => this.OperationMethod("+"));
+		this.subtractionButton.addEventListener("click", () => this.OperationMethod("-"));
+		this.multiplicationButton.addEventListener("click", () => this.OperationMethod("*"));
+		this.divisionButton.addEventListener("click", () => this.OperationMethod("/"));
+		this.remainderButton.addEventListener("click", () => this.OperationMethod("%"));
+		this.squareRootButton.addEventListener("click", () => this.OperationMethod("//"));
+		this.toPowerButton.addEventListener("click", () => this.OperationMethod("**"));
+		this.logButton.addEventListener("click", () => this.OperationMethod("log"));
 		this.submitButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.resetButton.addEventListener("click", () => console.log("Addition button clicked"));
 		this.copyButton.addEventListener("click", () => console.log("Addition button clicked"));
@@ -74,22 +74,22 @@ class CalculatorController extends Controller {
 	
 	
 	get remainderButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(2) > button.percent");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic > button.percent");
 	}
 	
 	
 	get toPowerButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(3) > button.square");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic > button.square");
 	}
 	
 	
 	get squareRootButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(3) > button.sqrt");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic > button.sqrt");
 	}
 	
 	
 	get logButton () {
-		return this.mainDivision.querySelector("span.operations > div.arithmetic:nth-of-type(3) > button.log");
+		return this.mainDivision.querySelector("span.operations > div.arithmetic > button.log");
 	}
 	
 	
@@ -107,58 +107,18 @@ class CalculatorController extends Controller {
 		return this.controlDivision.querySelector("button.evaluate");
 	}
 	
-	async additionOperand (operandSign) {
+	async OperationMethod (operandSign) {
 
 			const lefOperand = Number(this.inputLeftField.value);
 			const rightOperand = Number(this.inputRightField.value);
-			const additionOperation = binaryOperators[operandSign];
-			const operationResults = additionOperation(lefOperand,rightOperand);
+			const functionOperation = binaryOperators[operandSign];
+			const operationResults = functionOperation(lefOperand,rightOperand);
 			return this.inputLeftField.value = operationResults;
 			
 
 		
 	}
 	
-	async subtractionOperand (operandSign) {
-
-		const lefOperand = Number(this.inputLeftField.value);
-		const rightOperand = Number(this.inputRightField.value);
-		const subtractionOperation = binaryOperators[operandSign];
-		const operationResults = subtractionOperation(lefOperand,rightOperand);
-		return this.inputLeftField.value = operationResults;
-		
-
-	
-	}
-
-	async multiplicationOperand (operandSign) {
-
-		const lefOperand = Number(this.inputLeftField.value);
-		const rightOperand = Number(this.inputRightField.value);
-		const multiplicationOperation = binaryOperators[operandSign];
-		const operationResults = multiplicationOperation(lefOperand,rightOperand);
-		return this.inputLeftField.value = operationResults;
-
-	}
-
-	async divisionOperand (operandSign) {
-
-		const lefOperand = Number(this.inputLeftField.value);
-		const rightOperand = Number(this.inputRightField.value);
-		const divisionOperation = binaryOperators[operandSign];
-		const operationResults = divisionOperation(lefOperand,rightOperand);
-		return this.inputLeftField.value = operationResults;
-
-	}
-	async remainderOperand (operandSign) {
-
-		const lefOperand = Number(this.inputLeftField.value);
-		const rightOperand = Number(this.inputRightField.value);
-		const remainderOperation = binaryOperators[operandSign];
-		const operationResults = remainderOperation(lefOperand,rightOperand);
-		return this.inputLeftField.value = operationResults;
-
-	}
 }
 
 /**
